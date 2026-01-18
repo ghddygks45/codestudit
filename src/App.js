@@ -3,7 +3,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 // 전역으로 쿼리 기능을 제공하는 Provider
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-import HomePage from "./HomePage";
+import HomePage from "./pages/HomePage";
+import PostList from "./components/PostList";
 
 // QueryClient 인스턴스 생성
 // → 서버 상태 캐시, 요청 관리, 리트라이, staleTime 등을 관리하는 "중앙 관리자"

@@ -3,6 +3,8 @@ import { getPosts, getPostsByUsername } from "../api";
 import Post from "./Post";
 import { FEED_VARIANT } from "../values";
 import styles from "./PostList.module.css";
+import LoadingPage from "../pages/LoadingPage";
+import ErrorPage from "../pages/ErrorPage";
 
 function PostList({ variant = FEED_VARIANT.HOME_FEED }) {
   let postsQueryKey;
@@ -19,10 +21,18 @@ function PostList({ variant = FEED_VARIANT.HOME_FEED }) {
     console.warn("Invalid feed request.");
   }
 
-  const { data: postsData } = useQuery({
+  const {
+    data: postsData,
+    isPending,
+    isError,
+  } = useQuery({
     queryKey: postsQueryKey,
     queryFn: postsQueryFn,
   });
+
+  if (isPending) return <LoadingPage />;
+
+  if (isError) return <ErrorPage />;
 
   const posts = postsData?.results ?? [];
 

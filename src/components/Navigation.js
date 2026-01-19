@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import Container from "./Container";
+import UserMenu from "./UserMenu";
 import styles from "./Navigation.module.css";
 
 function getLinkStyle({ isActive }) {
@@ -24,6 +25,9 @@ function Navigation() {
             <NavLink style={getLinkStyle} to="/my-feed">
               내 피드
             </NavLink>
+          </li>
+          <li>
+            <UserMenu />
           </li>
         </ul>
       </Container>

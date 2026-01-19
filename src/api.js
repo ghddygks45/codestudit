@@ -26,3 +26,8 @@ export async function uploadPost(newPost) {
 
   return await response.json();
 }
+
+export async function getUserInfo(username) {
+  const response = await fetch(`${BASE_URL}/users/${username}`);
+  return await response.json();
+}

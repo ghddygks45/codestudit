@@ -1,13 +1,14 @@
+import { POSTS_PAGE_LIMIT } from "./values";
+
 const BASE_URL = "https://learn.codeit.kr/api/codestudit";
 
-export async function getPosts() {
-  const response = await fetch(`${BASE_URL}/posts`);
+export async function getPosts(page = 0, limit = POSTS_PAGE_LIMIT) {
+  const response = await fetch(`${BASE_URL}/posts?page=${page}&limit=${limit}`);
   return await response.json();
 }
 
-export async function getPostsByUsername(username) {
-  const response = await fetch(`${BASE_URL}/posts?username=${username}`);
-
+export async function getPostsByUsername(username, page = 0, limit = POSTS_PAGE_LIMIT) {
+  const response = await fetch(`${BASE_URL}/posts?username=${username}&page=${page}&limit=${limit}`);
   return await response.json();
 }
 

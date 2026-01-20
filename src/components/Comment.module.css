@@ -1,0 +1,14 @@
+.comment {
+  margin-top: 10px;
+  border-bottom: solid 1px #ebebeb;
+}
+
+.description {
+  display: -webkit-box;
+  margin: 0 0 10px;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 300;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

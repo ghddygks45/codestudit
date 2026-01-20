@@ -1,0 +1,24 @@
+.commentList {
+  margin: 20px 0 0;
+  padding: 0 10px;
+  border-top: 1px solid #ebebeb;
+}
+
+.pagination {
+  width: 240px;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+}
+
+.pagination button {
+  padding: 8px;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.pagination button:disabled {
+  background-color: rgb(193, 193, 193);
+  color: grey;
+}

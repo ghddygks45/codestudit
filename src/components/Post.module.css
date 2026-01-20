@@ -17,3 +17,33 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
+
+.post .engagement {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.post .engagement button {
+  width: 120px;
+  color: #4cafc8;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #4cafc8;
+  border-radius: 30px;
+  height: 40px;
+  font-size: 10px;
+}
+
+.likeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.like {
+  width: 12px;
+  height: 12px;
+  margin-top: -2px;
+}
